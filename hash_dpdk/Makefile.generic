@@ -1,0 +1,25 @@
+# Find all .c source files in the current folder
+SRCS := $(wildcard *.c)
+
+# Create a list of independent target binaries matching the source file names
+# e.g., main.c -> main, test_ring.c -> test_ring
+BINS := $(SRCS:.c=)
+
+PKGCONF ?= pkg-config
+
+# Query compiler & linker flags from the locally installed DPDK package
+CFLAGS += -O3 $(shell $(PKGCONF) --cflags libdpdk)
+LDFLAGS += $(shell $(PKGCONF) --libs libdpdk)
+
+# The default target compiles ALL independent binaries
+all: $(BINS)
+
+# Rule to compile any standalone binary directly from its matching source file
+%: %.c
+	gcc $(CFLAGS) $< -o $@ $(LDFLAGS)
+
+# Clean target to clear all compiled binaries
+clean:
+	rm -f $(BINS)
+
+.PHONY: all clean
