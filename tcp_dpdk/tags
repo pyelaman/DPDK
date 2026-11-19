@@ -1,0 +1,27 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ALKIRA_DPDK_H	alkira_dpdk.h	/^#define ALKIRA_DPDK_H$/;"	d	language:C++
+ALKIRA_MAX_FIREWALLS	alkira_dpdk.h	/^#define ALKIRA_MAX_FIREWALLS /;"	d	language:C++
+ALKIRA_MSS_FLOOR	alkira_dpdk.h	/^#define ALKIRA_MSS_FLOOR /;"	d	language:C++
+OUTER_VXLAN_ENCAP_LEN	alkira_dpdk.h	/^#define OUTER_VXLAN_ENCAP_LEN /;"	d	language:C++
+VXLAN_PORT	alkira_dpdk.h	/^#define VXLAN_PORT /;"	d	language:C++
+active_fw_count	dpdk_lb.c	/^static uint8_t active_fw_count = 0;$/;"	v	language:C	file:
+active_pool	dpdk_lb.c	/^static dpdk_fw_node_t active_pool[ALKIRA_MAX_FIREWALLS];$/;"	v	language:C	file:
+dpdk_fw_node_t	dpdk_lb.c	/^} dpdk_fw_node_t;$/;"	t	language:C	typeref:struct:__anon1	file:
+dst_ip	alkira_dpdk.h	/^    rte_be32_t dst_ip;$/;"	m	language:C++	struct:__anon2
+dst_port	alkira_dpdk.h	/^    rte_be16_t dst_port;$/;"	m	language:C++	struct:__anon2
+extract_canonical_key	dpdk_director.c	/^void extract_canonical_key(const struct rte_ipv4_hdr *inner_ip, $/;"	f	language:C
+flow_key_t	alkira_dpdk.h	/^} __attribute__((packed)) flow_key_t;$/;"	t	language:C++	typeref:struct:__anon2
+fw_ip	dpdk_lb.c	/^    uint32_t fw_ip;$/;"	m	language:C	struct:__anon1	file:
+is_alive	dpdk_lb.c	/^    bool     is_alive;$/;"	m	language:C	struct:__anon1	file:
+port_id	dpdk_lb.c	/^    uint16_t port_id;$/;"	m	language:C	struct:__anon1	file:
+process_alkira_transit_burst	pipeline_worker.c	/^void process_alkira_transit_burst(uint16_t port_id, uint16_t queue_id, struct rte_mbuf **pkts, uint16_t nb_pkts) {$/;"	f	language:C
+process_dpdk_mss_clamp	/Users/pyelaman/programs/Google/Alkira/tcp_dpdk/dpdk_clamper.c	/^bool process_dpdk_mss_clamp(struct rte_mbuf *m) {$/;"	f	language:C++
+protocol	alkira_dpdk.h	/^    uint8_t    protocol;$/;"	m	language:C++	struct:__anon2
+select_dpdk_firewall_node	dpdk_lb.c	/^uint16_t select_dpdk_firewall_node(const flow_key_t *c_key) {$/;"	f	language:C
+src_ip	alkira_dpdk.h	/^    rte_be32_t src_ip;$/;"	m	language:C++	struct:__anon2
+src_port	alkira_dpdk.h	/^    rte_be16_t src_port;$/;"	m	language:C++	struct:__anon2

@@ -1,0 +1,41 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ALKIRA_DPDK_H	alkira_dpdk.h	/^#define ALKIRA_DPDK_H$/;"	d	language:C++
+ALKIRA_MAX_FIREWALLS	alkira_dpdk.h	/^#define ALKIRA_MAX_FIREWALLS /;"	d	language:C++
+ALKIRA_MSS_FLOOR	alkira_dpdk.h	/^#define ALKIRA_MSS_FLOOR /;"	d	language:C++
+ALKIRA_STATE_H	alkira_state.h	/^#define ALKIRA_STATE_H$/;"	d	language:C++
+BURST_SIZE	/Users/pyelaman/programs/Google/Alkira/hash_dpdk/dpdk_worker_pipeline.c	/^#define BURST_SIZE /;"	d	language:C++	file:
+MILLION_SESSIONS	alkira_state_table.c	/^#define MILLION_SESSIONS /;"	d	language:C	file:
+OUTER_VXLAN_ENCAP_LEN	alkira_dpdk.h	/^#define OUTER_VXLAN_ENCAP_LEN /;"	d	language:C++
+VXLAN_PORT	alkira_dpdk.h	/^#define VXLAN_PORT /;"	d	language:C++
+alkira_state_engine_t	alkira_state.h	/^} alkira_state_engine_t;$/;"	t	language:C++	typeref:struct:__anon3
+assigned_fw_port	alkira_state.h	/^    uint16_t   assigned_fw_port;   \/\/ Stored firewall path index to enforce stickiness$/;"	m	language:C++	struct:__anon2
+byte_count	alkira_state.h	/^    uint64_t   byte_count;$/;"	m	language:C++	struct:__anon2
+canonical_hash	alkira_state.h	/^    uint32_t   canonical_hash;     \/\/ Precomputed hash token signature$/;"	m	language:C++	struct:__anon2
+dst_ip	alkira_dpdk.h	/^    rte_be32_t dst_ip;$/;"	m	language:C++	struct:__anon1
+dst_port	alkira_dpdk.h	/^    rte_be16_t dst_port;$/;"	m	language:C++	struct:__anon1
+egress_vni	alkira_state.h	/^    uint16_t   egress_vni;         \/\/ Transit tenant boundary identification tag$/;"	m	language:C++	struct:__anon2
+extract_canonical_key	/Users/pyelaman/programs/Google/Alkira/hash_dpdk/dpdk_worker_pipeline.c	/^extern void extract_canonical_key(const struct rte_ipv4_hdr *inner_ip, const struct rte_tcp_hdr *inner_tcp, flow_key_t *c_key);$/;"	p	language:C++	file:
+flow_key_t	alkira_dpdk.h	/^} __attribute__((packed)) flow_key_t;$/;"	t	language:C++	typeref:struct:__anon1
+get_or_create_session	/Users/pyelaman/programs/Google/Alkira/hash_dpdk/dpdk_worker_pipeline.c	/^extern session_meta_t *get_or_create_session(const flow_key_t *c_key, uint16_t default_fw_port, bool *is_new_flow);$/;"	p	language:C++	file:
+get_or_create_session	alkira_state_table.c	/^session_meta_t *get_or_create_session(const flow_key_t *c_key, uint16_t default_fw_port, bool *is_new_flow) {$/;"	f	language:C
+hash_table_ctx	alkira_state.h	/^    struct rte_hash *hash_table_ctx;$/;"	m	language:C++	struct:__anon3	typeref:struct:__anon3::rte_hash
+initialize_alkira_session_table	alkira_state_table.c	/^bool initialize_alkira_session_table(void) {$/;"	f	language:C
+is_active	alkira_state.h	/^    bool       is_active;$/;"	m	language:C++	struct:__anon2
+last_seen_tsc	alkira_state.h	/^    uint64_t   last_seen_tsc;      \/\/ Used for tracking inactive session timeouts$/;"	m	language:C++	struct:__anon2
+max_sessions	alkira_state.h	/^    uint32_t         max_sessions;$/;"	m	language:C++	struct:__anon3
+metadata_array	alkira_state.h	/^    session_meta_t  *metadata_array; \/\/ Extracted array map utilizing DPDK's index returns$/;"	m	language:C++	struct:__anon3
+packet_count	alkira_state.h	/^    uint64_t   packet_count;$/;"	m	language:C++	struct:__anon2
+process_alkira_pipeline_with_state	/Users/pyelaman/programs/Google/Alkira/hash_dpdk/dpdk_worker_pipeline.c	/^void process_alkira_pipeline_with_state(uint16_t port_id, uint16_t queue_id, struct rte_mbuf **pkts, uint16_t nb_pkts) {$/;"	f	language:C++
+process_dpdk_mss_clamp	/Users/pyelaman/programs/Google/Alkira/hash_dpdk/dpdk_worker_pipeline.c	/^extern bool process_dpdk_mss_clamp(struct rte_mbuf *m);$/;"	p	language:C++	file:
+protocol	alkira_dpdk.h	/^    uint8_t    protocol;$/;"	m	language:C++	struct:__anon1
+select_dpdk_firewall_node	/Users/pyelaman/programs/Google/Alkira/hash_dpdk/dpdk_worker_pipeline.c	/^extern uint16_t select_dpdk_firewall_node(const flow_key_t *c_key);$/;"	p	language:C++	file:
+session_meta_t	alkira_state.h	/^} __attribute__((aligned(64))) session_meta_t;$/;"	t	language:C++	typeref:struct:__anon2
+src_ip	alkira_dpdk.h	/^    rte_be32_t src_ip;$/;"	m	language:C++	struct:__anon1
+src_port	alkira_dpdk.h	/^    rte_be16_t src_port;$/;"	m	language:C++	struct:__anon1
+state_engine	alkira_state_table.c	/^static alkira_state_engine_t state_engine;$/;"	v	language:C	file:
+tcp_state	alkira_state.h	/^    uint8_t    tcp_state;          \/\/ 0: SYN, 1: ESTABLISHED, 2: FIN\/RST$/;"	m	language:C++	struct:__anon2

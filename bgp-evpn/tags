@@ -1,0 +1,166 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ARP_CACHE_SIZE	evpn_advanced_scale.c	/^#define ARP_CACHE_SIZE /;"	d	language:C	file:
+ARP_CACHE_SIZE	evpn_hierarchical_rr.c	/^#define ARP_CACHE_SIZE /;"	d	language:C	file:
+DIR24_SIZE	evpn_scale_trie.c	/^#define DIR24_SIZE /;"	d	language:C	file:
+EVPN_ROUTE_TYPE_2_HOST	evpn_scale_trie.c	/^    EVPN_ROUTE_TYPE_2_HOST,$/;"	e	language:C	enum:__anon2	file:
+EVPN_ROUTE_TYPE_5_PREFIX	evpn_scale_trie.c	/^    EVPN_ROUTE_TYPE_5_PREFIX$/;"	e	language:C	enum:__anon2	file:
+HASH_TABLE_SIZE	flyWeightAttributeHash.c	/^#define HASH_TABLE_SIZE /;"	d	language:C	file:
+MAX_LEAVES	pubSubRouteTargetUpdates.c	/^#define MAX_LEAVES /;"	d	language:C	file:
+MAX_PREFIXES	prefixIndependentConvergence.c	/^#define MAX_PREFIXES /;"	d	language:C	file:
+MAX_TENANTS	evpn_advanced_scale.c	/^#define MAX_TENANTS /;"	d	language:C	file:
+MAX_TENANTS	evpn_hierarchical_rr.c	/^#define MAX_TENANTS /;"	d	language:C	file:
+RING_BUFFER_SIZE	/Users/pyelaman/programs/Google/Alkira/bgp-evpn/locklessAsyncPipelineRouteUpdates.c	/^#define RING_BUFFER_SIZE /;"	d	language:C++	file:
+ROUTE_TABLE_SIZE	evpn_advanced_scale.c	/^#define ROUTE_TABLE_SIZE /;"	d	language:C	file:
+ROUTE_TABLE_SIZE	evpn_hierarchical_rr.c	/^#define ROUTE_TABLE_SIZE /;"	d	language:C	file:
+TARGET_RT	pubSubRouteTargetUpdates.c	/^#define TARGET_RT /;"	d	language:C	file:
+TBL8_SIZE	evpn_scale_trie.c	/^#define TBL8_SIZE /;"	d	language:C	file:
+active_peer_count	evpn_hierarchical_rr.c	/^    uint32_t active_peer_count;$/;"	m	language:C	struct:__anon9	file:
+active_physical_egress_port	prefixIndependentConvergence.c	/^    uint32_t active_physical_egress_port;$/;"	m	language:C	struct:__anon11	file:
+active_rt_subscriptions	pubSubRouteTargetUpdates.c	/^    bool active_rt_subscriptions[65536]; \/\/ Bitmap tracking subscription targets$/;"	m	language:C	struct:__anon1	file:
+active_underlay_vtep	prefixIndependentConvergence.c	/^    uint32_t active_underlay_vtep;$/;"	m	language:C	struct:__anon11	file:
+add_next_hop	evpn_scale_trie.c	/^uint32_t add_next_hop(multi_bit_trie_t* trie, uint32_t gw, uint32_t vni, const char* iface) {$/;"	f	language:C
+arp_table	evpn_advanced_scale.c	/^    proxy_arp_entry_t arp_table[ARP_CACHE_SIZE];$/;"	m	language:C	struct:__anon17	file:
+arp_table	evpn_hierarchical_rr.c	/^    proxy_arp_entry_t    arp_table[ARP_CACHE_SIZE];$/;"	m	language:C	struct:__anon10	file:
+as_path	flyWeightAttributeHash.c	/^    char as_path[256];$/;"	m	language:C	struct:attr_block	file:
+attr_block	flyWeightAttributeHash.c	/^typedef struct attr_block {$/;"	s	language:C	file:
+attr_block_t	flyWeightAttributeHash.c	/^} attr_block_t;$/;"	t	language:C	typeref:struct:attr_block	file:
+backup_underlay_vtep	prefixIndependentConvergence.c	/^    uint32_t backup_underlay_vtep;$/;"	m	language:C	struct:__anon11	file:
+best_path	radixTrieBestPathLookup.c	/^    bgp_attr_t best_path;$/;"	m	language:C	struct:radix_node	file:
+bgp_attr_t	radixTrieBestPathLookup.c	/^} bgp_attr_t;$/;"	t	language:C	typeref:struct:__anon18	file:
+bgp_route_t	evpn_advanced_scale.c	/^} bgp_route_t;$/;"	t	language:C	typeref:struct:__anon15	file:
+bgp_route_t	evpn_hierarchical_rr.c	/^} bgp_route_t;$/;"	t	language:C	typeref:struct:__anon7	file:
+bgp_update_event_t	/Users/pyelaman/programs/Google/Alkira/bgp-evpn/locklessAsyncPipelineRouteUpdates.c	/^} bgp_update_event_t;$/;"	t	language:C++	typeref:struct:__anon1	file:
+buffer	/Users/pyelaman/programs/Google/Alkira/bgp-evpn/locklessAsyncPipelineRouteUpdates.c	/^    bgp_update_event_t buffer[RING_BUFFER_SIZE];$/;"	m	language:C++	struct:__anon2	file:
+child	radixTrieBestPathLookup.c	/^    struct radix_node *child[2];$/;"	m	language:C	struct:radix_node	typeref:struct:radix_node::radix_node	file:
+clear_inter_vrf_leak_lookup	evpn_advanced_scale.c	/^bool clear_inter_vrf_leak_lookup(evpn_control_plane_t* cp, uint32_t ip, uint32_t source_vrf, $/;"	f	language:C
+clear_inter_vrf_leak_lookup	evpn_hierarchical_rr.c	/^bool clear_inter_vrf_leak_lookup(evpn_control_plane_t* cp, uint32_t ip, uint32_t source_vrf, $/;"	f	language:C
+cluster_id	evpn_hierarchical_rr.c	/^    uint32_t cluster_id;$/;"	m	language:C	struct:__anon9	file:
+create_node	radixTrieBestPathLookup.c	/^radix_node_t* create_node(void) {$/;"	f	language:C
+dequeue_update_event	/Users/pyelaman/programs/Google/Alkira/bgp-evpn/locklessAsyncPipelineRouteUpdates.c	/^bool dequeue_update_event(bgp_update_event_t *out_event) {$/;"	f	language:C++
+destination_prefix	prefixIndependentConvergence.c	/^    uint32_t destination_prefix;$/;"	m	language:C	struct:__anon12	file:
+dir24	evpn_scale_trie.c	/^    trie_entry_t dir24[DIR24_SIZE];$/;"	m	language:C	struct:__anon5	file:
+enqueue_update_event	/Users/pyelaman/programs/Google/Alkira/bgp-evpn/locklessAsyncPipelineRouteUpdates.c	/^bool enqueue_update_event(bgp_update_event_t event) {$/;"	f	language:C++
+ethernet_segment_id	evpn_advanced_scale.c	/^    uint32_t ethernet_segment_id; \/\/ ESI used for mass-withdrawal triggers$/;"	m	language:C	struct:__anon14	file:
+ethernet_segment_id	evpn_hierarchical_rr.c	/^    uint32_t ethernet_segment_id; \/\/ ESI used for mass-withdrawal triggers$/;"	m	language:C	struct:__anon6	file:
+evaluate_best_path_incremental	radixTrieBestPathLookup.c	/^bool evaluate_best_path_incremental(bgp_attr_t *current, bgp_attr_t *new_path) {$/;"	f	language:C
+evaluate_bgp_session_health	evpn_advanced_scale.c	/^bool evaluate_bgp_session_health(evpn_control_plane_t* cp, uint64_t current_time, $/;"	f	language:C
+evaluate_bgp_session_health	evpn_hierarchical_rr.c	/^bool evaluate_bgp_session_health(evpn_control_plane_t* cp, uint64_t current_time, $/;"	f	language:C
+evpn_control_plane_t	evpn_advanced_scale.c	/^} evpn_control_plane_t;$/;"	t	language:C	typeref:struct:__anon17	file:
+evpn_control_plane_t	evpn_hierarchical_rr.c	/^} evpn_control_plane_t;$/;"	t	language:C	typeref:struct:__anon10	file:
+evpn_next_hop_t	evpn_advanced_scale.c	/^} evpn_next_hop_t;$/;"	t	language:C	typeref:struct:__anon14	file:
+evpn_next_hop_t	evpn_hierarchical_rr.c	/^} evpn_next_hop_t;$/;"	t	language:C	typeref:struct:__anon6	file:
+evpn_route_type_t	evpn_scale_trie.c	/^} evpn_route_type_t;$/;"	t	language:C	typeref:enum:__anon2	file:
+evpn_trie_lookup	evpn_scale_trie.c	/^static inline next_hop_t* evpn_trie_lookup(multi_bit_trie_t* trie, uint32_t target_ip) {$/;"	f	language:C	file:
+execute_evpn_mass_withdrawal_by_esi	evpn_advanced_scale.c	/^size_t execute_evpn_mass_withdrawal_by_esi(evpn_control_plane_t* cp, uint32_t failed_esi) {$/;"	f	language:C
+execute_evpn_mass_withdrawal_by_esi	evpn_hierarchical_rr.c	/^size_t execute_evpn_mass_withdrawal_by_esi(evpn_control_plane_t* cp, uint32_t failed_esi) {$/;"	f	language:C
+ext_table	evpn_scale_trie.c	/^    uint32_t ext_table : 1;  \/\/ If 1, look up in tbl8 pool. If 0, contains final index.$/;"	m	language:C	struct:__anon4	file:
+gateway_ip	evpn_scale_trie.c	/^    uint32_t gateway_ip;$/;"	m	language:C	struct:__anon3	file:
+generate_attribute_hash	flyWeightAttributeHash.c	/^uint32_t generate_attribute_hash(const char *as_path, uint32_t rt) {$/;"	f	language:C
+global_as	evpn_advanced_scale.c	/^    uint32_t global_as;$/;"	m	language:C	struct:__anon13	file:
+global_rib	evpn_advanced_scale.c	/^    bgp_route_t       global_rib[ROUTE_TABLE_SIZE];$/;"	m	language:C	struct:__anon17	file:
+global_rib	evpn_hierarchical_rr.c	/^    bgp_route_t          global_rib[ROUTE_TABLE_SIZE];$/;"	m	language:C	struct:__anon10	file:
+handle_ingress_arp_request	evpn_advanced_scale.c	/^bool handle_ingress_arp_request(evpn_control_plane_t* cp, uint32_t target_ip, $/;"	f	language:C
+handle_ingress_arp_request	evpn_hierarchical_rr.c	/^bool handle_ingress_arp_request(evpn_control_plane_t* cp, uint32_t target_ip, $/;"	f	language:C
+hash_table	flyWeightAttributeHash.c	/^attr_block_t* hash_table[HASH_TABLE_SIZE];$/;"	v	language:C
+head	/Users/pyelaman/programs/Google/Alkira/bgp-evpn/locklessAsyncPipelineRouteUpdates.c	/^    volatile uint32_t head;$/;"	m	language:C++	struct:__anon2	file:
+index	evpn_scale_trie.c	/^    uint32_t index     : 30; \/\/ Direct offset index pointing to the final next_hop table item$/;"	m	language:C	struct:__anon4	file:
+indirect_next_hop_t	prefixIndependentConvergence.c	/^} indirect_next_hop_t;$/;"	t	language:C	typeref:struct:__anon11	file:
+inh_pointer	prefixIndependentConvergence.c	/^    indirect_next_hop_t *inh_pointer; \/\/ DAG Pointer to shared indirect next hop record row$/;"	m	language:C	struct:__anon12	file:
+init_evpn_trie	evpn_scale_trie.c	/^multi_bit_trie_t* init_evpn_trie() {$/;"	f	language:C
+inject_proxy_arp_binding	evpn_advanced_scale.c	/^void inject_proxy_arp_binding(evpn_control_plane_t* cp, uint32_t ip, $/;"	f	language:C
+inject_proxy_arp_binding	evpn_hierarchical_rr.c	/^void inject_proxy_arp_binding(evpn_control_plane_t* cp, uint32_t ip, $/;"	f	language:C
+insert_evpn_type5_prefix	evpn_scale_trie.c	/^void insert_evpn_type5_prefix(multi_bit_trie_t* trie, uint32_t ip, uint8_t prefix_len, uint32_t next_hop_idx) {$/;"	f	language:C
+insert_or_update_prefix	radixTrieBestPathLookup.c	/^void insert_or_update_prefix(radix_node_t *root, uint32_t prefix, uint32_t mask_len, $/;"	f	language:C
+intern_attributes	flyWeightAttributeHash.c	/^attr_block_t* intern_attributes(const char *as_path, uint32_t rt) {$/;"	f	language:C
+ip_address	evpn_advanced_scale.c	/^    uint32_t ip_address;$/;"	m	language:C	struct:__anon16	file:
+ip_address	evpn_hierarchical_rr.c	/^    uint32_t ip_address;$/;"	m	language:C	struct:__anon8	file:
+is_bgp_session_established	evpn_advanced_scale.c	/^    _Atomic bool      is_bgp_session_established;$/;"	m	language:C	struct:__anon17	file:
+is_bgp_session_established	evpn_hierarchical_rr.c	/^    _Atomic bool         is_bgp_session_established;$/;"	m	language:C	struct:__anon10	file:
+is_graceful_restart_active	evpn_advanced_scale.c	/^    _Atomic bool      is_graceful_restart_active;$/;"	m	language:C	struct:__anon17	file:
+is_graceful_restart_active	evpn_hierarchical_rr.c	/^    _Atomic bool         is_graceful_restart_active;$/;"	m	language:C	struct:__anon10	file:
+is_valid	evpn_advanced_scale.c	/^    bool              is_valid;$/;"	m	language:C	struct:__anon15	file:
+is_valid	evpn_advanced_scale.c	/^    bool     is_valid;$/;"	m	language:C	struct:__anon14	file:
+is_valid	evpn_advanced_scale.c	/^    bool     is_valid;$/;"	m	language:C	struct:__anon16	file:
+is_valid	evpn_hierarchical_rr.c	/^    bool              is_valid;$/;"	m	language:C	struct:__anon7	file:
+is_valid	evpn_hierarchical_rr.c	/^    bool     is_valid;$/;"	m	language:C	struct:__anon6	file:
+is_valid	evpn_hierarchical_rr.c	/^    bool     is_valid;$/;"	m	language:C	struct:__anon8	file:
+is_valid_route	radixTrieBestPathLookup.c	/^    bool is_valid_route;$/;"	m	language:C	struct:radix_node	file:
+last_keepalive_timestamp	evpn_advanced_scale.c	/^    _Atomic uint64_t  last_keepalive_timestamp;$/;"	m	language:C	struct:__anon17	file:
+last_keepalive_timestamp	evpn_hierarchical_rr.c	/^    _Atomic uint64_t     last_keepalive_timestamp;$/;"	m	language:C	struct:__anon10	file:
+leaf_id	pubSubRouteTargetUpdates.c	/^    uint32_t leaf_id;$/;"	m	language:C	struct:__anon1	file:
+leaf_peer_t	pubSubRouteTargetUpdates.c	/^} leaf_peer_t;$/;"	t	language:C	typeref:struct:__anon1	file:
+local_pref	radixTrieBestPathLookup.c	/^    uint32_t local_pref;$/;"	m	language:C	struct:__anon18	file:
+mac_address	evpn_advanced_scale.c	/^    uint8_t  mac_address[6];$/;"	m	language:C	struct:__anon16	file:
+mac_address	evpn_hierarchical_rr.c	/^    uint8_t  mac_address[6];$/;"	m	language:C	struct:__anon8	file:
+main	/Users/pyelaman/programs/Google/Alkira/bgp-evpn/locklessAsyncPipelineRouteUpdates.c	/^int main(void) {$/;"	f	language:C++
+main	evpn_advanced_scale.c	/^int main() {$/;"	f	language:C
+main	evpn_hierarchical_rr.c	/^int main() {$/;"	f	language:C
+main	evpn_scale_trie.c	/^int main() {$/;"	f	language:C
+main	flyWeightAttributeHash.c	/^int main(void) {$/;"	f	language:C
+main	prefixIndependentConvergence.c	/^int main(void) {$/;"	f	language:C
+main	pubSubRouteTargetUpdates.c	/^int main(void) {$/;"	f	language:C
+main	radixTrieBestPathLookup.c	/^int main(void) {$/;"	f	language:C
+mask_len	radixTrieBestPathLookup.c	/^    uint32_t mask_len;$/;"	m	language:C	struct:radix_node	file:
+med	radixTrieBestPathLookup.c	/^    uint32_t med;$/;"	m	language:C	struct:__anon18	file:
+multi_bit_trie_t	evpn_scale_trie.c	/^} multi_bit_trie_t;$/;"	t	language:C	typeref:struct:__anon5	file:
+next	flyWeightAttributeHash.c	/^    struct attr_block *next; \/\/ Chaining for collisions$/;"	m	language:C	struct:attr_block	typeref:struct:attr_block::attr_block	file:
+next_free_tbl8	evpn_scale_trie.c	/^    uint32_t     next_free_tbl8;$/;"	m	language:C	struct:__anon5	file:
+next_hop	evpn_advanced_scale.c	/^    evpn_next_hop_t   next_hop;$/;"	m	language:C	struct:__anon15	file:
+next_hop	evpn_hierarchical_rr.c	/^    evpn_next_hop_t   next_hop;$/;"	m	language:C	struct:__anon7	file:
+next_hop	radixTrieBestPathLookup.c	/^    uint32_t next_hop;$/;"	m	language:C	struct:__anon18	file:
+next_hop_count	evpn_scale_trie.c	/^    uint32_t     next_hop_count;$/;"	m	language:C	struct:__anon5	file:
+next_hop_t	evpn_scale_trie.c	/^} next_hop_t;$/;"	t	language:C	typeref:struct:__anon3	file:
+next_hops	evpn_scale_trie.c	/^    next_hop_t   next_hops[1024];$/;"	m	language:C	struct:__anon5	file:
+outbound_interface	evpn_scale_trie.c	/^    char     outbound_interface[16];$/;"	m	language:C	struct:__anon3	file:
+prefix	radixTrieBestPathLookup.c	/^    uint32_t prefix;$/;"	m	language:C	struct:radix_node	file:
+prefix_ip	evpn_advanced_scale.c	/^    uint32_t          prefix_ip;$/;"	m	language:C	struct:__anon15	file:
+prefix_ip	evpn_hierarchical_rr.c	/^    uint32_t          prefix_ip;$/;"	m	language:C	struct:__anon7	file:
+prefix_len	evpn_advanced_scale.c	/^    uint8_t           prefix_len;$/;"	m	language:C	struct:__anon15	file:
+prefix_len	evpn_hierarchical_rr.c	/^    uint8_t           prefix_len;$/;"	m	language:C	struct:__anon7	file:
+prefix_route_t	prefixIndependentConvergence.c	/^} prefix_route_t;$/;"	t	language:C	typeref:struct:__anon12	file:
+process_and_advertise_evpn_route	pubSubRouteTargetUpdates.c	/^void process_and_advertise_evpn_route(leaf_peer_t **peers, uint32_t total_peers, $/;"	f	language:C
+process_bgp_keepalive_pulse	evpn_advanced_scale.c	/^void process_bgp_keepalive_pulse(evpn_control_plane_t* cp, uint64_t current_time) {$/;"	f	language:C
+process_bgp_keepalive_pulse	evpn_hierarchical_rr.c	/^void process_bgp_keepalive_pulse(evpn_control_plane_t* cp, uint64_t current_time) {$/;"	f	language:C
+proxy_arp_entry_t	evpn_advanced_scale.c	/^} proxy_arp_entry_t;$/;"	t	language:C	typeref:struct:__anon16	file:
+proxy_arp_entry_t	evpn_hierarchical_rr.c	/^} proxy_arp_entry_t;$/;"	t	language:C	typeref:struct:__anon8	file:
+radix_node	radixTrieBestPathLookup.c	/^typedef struct radix_node {$/;"	s	language:C	file:
+radix_node_t	radixTrieBestPathLookup.c	/^} radix_node_t;$/;"	t	language:C	typeref:struct:radix_node	file:
+ref_count	flyWeightAttributeHash.c	/^    uint32_t ref_count;$/;"	m	language:C	struct:attr_block	file:
+register_rt_subscription	pubSubRouteTargetUpdates.c	/^void register_rt_subscription(leaf_peer_t *leaf, uint32_t route_target) {$/;"	f	language:C
+rib_engine_thread_entry	/Users/pyelaman/programs/Google/Alkira/bgp-evpn/locklessAsyncPipelineRouteUpdates.c	/^void* rib_engine_thread_entry(void *arg) {$/;"	f	language:C++
+route_reflect_shard_decision	evpn_hierarchical_rr.c	/^bool route_reflect_shard_decision(const evpn_control_plane_t* cp, uint32_t cluster_id, $/;"	f	language:C
+route_target	flyWeightAttributeHash.c	/^    uint32_t route_target;$/;"	m	language:C	struct:attr_block	file:
+route_target_t	evpn_advanced_scale.c	/^} route_target_t;$/;"	t	language:C	typeref:struct:__anon13	file:
+route_target_t	evpn_scale_trie.c	/^typedef uint64_t route_target_t;$/;"	t	language:C	file:
+route_target_tenant	evpn_hierarchical_rr.c	/^    uint64_t          route_target_tenant;$/;"	m	language:C	struct:__anon7	file:
+rr_cluster_shard_t	evpn_hierarchical_rr.c	/^} rr_cluster_shard_t;$/;"	t	language:C	typeref:struct:__anon9	file:
+rr_shards	evpn_hierarchical_rr.c	/^    rr_cluster_shard_t   rr_shards[4]; \/\/ Supported sharded clusters$/;"	m	language:C	struct:__anon10	file:
+shared_ring	/Users/pyelaman/programs/Google/Alkira/bgp-evpn/locklessAsyncPipelineRouteUpdates.c	/^spsc_ring_buffer_t shared_ring = { .head = 0, .tail = 0 };$/;"	v	language:C++
+simulated_metric	/Users/pyelaman/programs/Google/Alkira/bgp-evpn/locklessAsyncPipelineRouteUpdates.c	/^    uint32_t simulated_metric;$/;"	m	language:C++	struct:__anon1	file:
+simulated_prefix	/Users/pyelaman/programs/Google/Alkira/bgp-evpn/locklessAsyncPipelineRouteUpdates.c	/^    uint32_t simulated_prefix;$/;"	m	language:C++	struct:__anon1	file:
+socket_reader_thread_entry	/Users/pyelaman/programs/Google/Alkira/bgp-evpn/locklessAsyncPipelineRouteUpdates.c	/^void* socket_reader_thread_entry(void *arg) {$/;"	f	language:C++
+spsc_ring_buffer_t	/Users/pyelaman/programs/Google/Alkira/bgp-evpn/locklessAsyncPipelineRouteUpdates.c	/^} spsc_ring_buffer_t;$/;"	t	language:C++	typeref:struct:__anon2	file:
+tail	/Users/pyelaman/programs/Google/Alkira/bgp-evpn/locklessAsyncPipelineRouteUpdates.c	/^    volatile uint32_t tail;$/;"	m	language:C++	struct:__anon2	file:
+tbl8	evpn_scale_trie.c	/^    trie_entry_t tbl8[TBL8_SIZE];$/;"	m	language:C	struct:__anon5	file:
+tenant_rt_end	evpn_hierarchical_rr.c	/^    uint64_t tenant_rt_end;$/;"	m	language:C	struct:__anon9	file:
+tenant_rt_start	evpn_hierarchical_rr.c	/^    uint64_t tenant_rt_start;$/;"	m	language:C	struct:__anon9	file:
+total_active_routes	evpn_advanced_scale.c	/^    uint32_t          total_active_routes;$/;"	m	language:C	struct:__anon17	file:
+total_active_routes	evpn_hierarchical_rr.c	/^    uint32_t             total_active_routes;$/;"	m	language:C	struct:__anon10	file:
+trie_entry_t	evpn_scale_trie.c	/^} trie_entry_t;$/;"	t	language:C	typeref:struct:__anon4	file:
+tunnel_endpoint_ip	evpn_advanced_scale.c	/^    uint32_t tunnel_endpoint_ip;$/;"	m	language:C	struct:__anon14	file:
+tunnel_endpoint_ip	evpn_hierarchical_rr.c	/^    uint32_t tunnel_endpoint_ip;$/;"	m	language:C	struct:__anon6	file:
+valid	evpn_scale_trie.c	/^    uint32_t valid     : 1;  \/\/ Is this entry active?$/;"	m	language:C	struct:__anon4	file:
+verify_route_target_constraint	evpn_scale_trie.c	/^bool verify_route_target_constraint(route_target_t incoming_rt, const route_target_t* configured_rts, size_t num_rts) {$/;"	f	language:C
+vni_tag	evpn_advanced_scale.c	/^    uint32_t vni_tag;$/;"	m	language:C	struct:__anon13	file:
+vrf_id	evpn_advanced_scale.c	/^    uint32_t          vrf_id;$/;"	m	language:C	struct:__anon15	file:
+vrf_id	evpn_advanced_scale.c	/^    uint32_t vrf_id;$/;"	m	language:C	struct:__anon16	file:
+vrf_id	evpn_hierarchical_rr.c	/^    uint32_t          vrf_id;$/;"	m	language:C	struct:__anon7	file:
+vrf_id	evpn_hierarchical_rr.c	/^    uint32_t vrf_id;$/;"	m	language:C	struct:__anon8	file:
+vxlan_vni	evpn_advanced_scale.c	/^    uint32_t vxlan_vni;$/;"	m	language:C	struct:__anon14	file:
+vxlan_vni	evpn_hierarchical_rr.c	/^    uint32_t vxlan_vni;$/;"	m	language:C	struct:__anon6	file:
+vxlan_vni	evpn_scale_trie.c	/^    uint32_t vxlan_vni;$/;"	m	language:C	struct:__anon3	file:

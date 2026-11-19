@@ -1,0 +1,97 @@
+#include "alkira_state.h"
+
+extern void extract_canonical_key(const struct rte_ipv4_hdr *inner_ip, const struct rte_tcp_hdr *inner_tcp, flow_key_t *c_key);
+extern uint16_t select_dpdk_firewall_node(const flow_key_t *c_key);
+extern bool process_dpdk_mss_clamp(struct rte_mbuf *m);
+extern session_meta_t *get_or_create_session(const flow_key_t *c_key, uint16_t default_fw_port, bool *is_new_flow);
+extern void update_tcp_state_machine(session_meta_t *meta, const struct rte_tcp_hdr *tcp, uint64_t hertz_freq);
+
+#define BURST_SIZE 32
+
+/* Processes massive continuous packet arrays leveraging vectorized parallel caching lookups */
+void process_alkira_pipeline_with_state(uint16_t port_id, uint16_t queue_id, struct rte_mbuf **pkts, uint16_t nb_pkts) {
+    flow_key_t keys[BURST_SIZE];
+    const void *key_ptrs[BURST_SIZE];
+    int32_t positions[BURST_SIZE];
+    struct rte_ipv4_hdr *inner_ips[BURST_SIZE];
+    struct rte_tcp_hdr *inner_tcps[BURST_SIZE];
+    bool valid_mask[BURST_SIZE] = {false};
+
+    // --- PHASE 1: PRE-FETCH PARSING LAYER ---
+    for (uint16_t i = 0; i < nb_pkts; i++) {
+        struct rte_mbuf *m = pkts[i];
+        
+        // Issue early hardware pipelining prefetch hints to reduce L1/L2 cache misses
+        rte_prefetch0(rte_pktmbuf_mtod(m, void *));
+
+        uint32_t inner_ip_offset = OUTER_VXLAN_ENCAP_LEN + sizeof(struct rte_ether_hdr);
+        if (m->pkt_len < inner_ip_offset + sizeof(struct rte_ipv4_hdr)) continue;
+
+        inner_ips[i] = rte_pktmbuf_mtod_offset(m, struct rte_ipv4_hdr *, inner_ip_offset);
+        
+        if (inner_ips[i]->next_proto_id == IPPROTO_TCP) {
+            uint32_t ip_len = (inner_ips[i]->version_ihl & RTE_IPV4_HDR_IHL_MASK) * RTE_IPV4_IHL_MULTIPLIER;
+            inner_tcps[i] = rte_pktmbuf_mtod_offset(m, struct rte_tcp_hdr *, inner_ip_offset + ip_len);
+            
+            // Generate cross-cloud tracking index constraints safely
+            extract_canonical_key(inner_ips[i], inner_tcps[i], &keys[i]);
+            key_ptrs[i] = &keys[i];
+            valid_mask[i] = true;
+        }
+    }
+
+    // --- PHASE 2: BATCH BULK VECTOR RUNTIME LOOKUP ---
+    // Perform up to 32 software memory array key lookups in a single optimized operation
+    extern alkira_state_engine_t state_engine;
+    rte_hash_lookup_bulk(state_engine.hash_table_ctx, key_ptrs, nb_pkts, positions);
+
+    // --- PHASE 3: STATE MODIFICATION & PIPELINE RESOLUTION ---
+    uint64_t current_tsc = rte_get_tsc_cycles();
+
+    for (uint16_t i = 0; i < nb_pkts; i++) {
+        struct rte_mbuf *m = pkts[i];
+        if (unlikely(!valid_mask[i])) {
+            rte_pktmbuf_free(m); // Drop invalid protocol payloads
+            continue;
+        }
+
+        session_meta_t *session_state = NULL;
+        int32_t pos = positions[i];
+
+        if (likely(pos >= 0)) {
+            // Direct structural lookup match hit
+            session_state = &state_engine.metadata_array[pos];
+            session_state->last_seen_tsc = current_tsc;
+        } else {
+            // Create a session dynamically if the flow hit a cache miss
+            bool is_new;
+            uint16_t dynamic_fw_target = select_dpdk_firewall_node(&keys[i]);
+            session_state = get_or_create_session(&keys[i], dynamic_fw_target, &is_new);
+        }
+
+        if (unlikely(session_state == NULL)) {
+            rte_pktmbuf_free(m); // Resource exhaustion fallback path
+            continue;
+        }
+
+        // Apply state tracking logic
+        session_state->packet_count++;
+        session_state->byte_count += m->pkt_len;
+
+        // Perform transactional state checking modifications 
+        if (inner_tcps[i]->tcp_flags & RTE_TCP_SYN_FLAG) {
+            process_dpdk_mss_clamp(m); // Inline modification applied to connection initialization states
+        }
+
+        // Forward execution down the assigned sticky service-chain route interface
+        uint16_t tx_target = session_state->assigned_fw_port;
+        if (likely(tx_target != 0xFFFF)) {
+            if (unlikely(rte_eth_tx_burst(tx_target, queue_id, &m, 1) < 1)) {
+                rte_pktmbuf_free(m); // Clear if target output buffer ring overflows
+            }
+        } else {
+            rte_pktmbuf_free(m);
+        }
+    }
+}
+
